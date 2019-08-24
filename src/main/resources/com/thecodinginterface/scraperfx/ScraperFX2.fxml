@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thecodinginterface.scraperfx.Controller">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.4732888146911519" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane>
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="447.0" prefWidth="561.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                              <BorderPane>
+                                 <center>
+                                    <TextArea fx:id="docTextArea" editable="false" prefHeight="442.0" prefWidth="556.0" stylesheets="@styles.css" wrapText="true" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane>
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                          <VBox fx:id="queryContentVBox" prefHeight="423.0" prefWidth="626.0" />
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <bottom>
+                              <HBox prefHeight="31.0" prefWidth="627.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="queryTextField" prefHeight="31.0" prefWidth="626.0" promptText="enter query selector" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1200.0" spacing="10.0" styleClass="header-bar" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="42.0" prefWidth="76.0" styleClass="logo-label">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tci-nav-logo.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="urlTextField" prefHeight="27.0" prefWidth="784.0" promptText="enter url" />
+            <Button fx:id="fetchBtn" mnemonicParsing="false" onAction="#handleFetchUrl" prefHeight="27.0" prefWidth="120.0" text="Fetch Page" />
+            <Region prefHeight="54.0" prefWidth="47.0" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="174.0" prefWidth="1200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,32 @@
+
+.header-hbox {
+    -fx-background-color: #03a9f4;
+    -fx-padding: 8 20 8 20;
+    -fx-spacing: 10;
+    -fx-alignment: CENTER;
+}
+
+.logo-label {
+    -fx-background-color: #edf3f5;
+    -fx-background-insets: 4;
+    -fx-background-radius: 12;
+    -fx-padding: 3 2 3 2;
+}
+
+.text-field {
+    -fx-padding: 10 8 10 8;
+}
+
+.button {
+    -fx-padding: 10 10 10 10;
+    -fx-background-color: #0871a5;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+  -fx-background-color: #0a3f5a;
+}
+
+.button:pressed, .button:disabled {
+  -fx-background-color: #0d76aa;
+}
